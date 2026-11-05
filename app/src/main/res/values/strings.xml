@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="student_info" translatable="false">Trần Đức Anh - 24110155</string>
+
+    <!-- Key texts -->
+    <string name="key_0">0</string>
+    <string name="key_1">1</string>
+    <string name="key_2">2</string>
+    <string name="key_3">3</string>
+    <string name="key_4">4</string>
+    <string name="key_5">5</string>
+    <string name="key_6">6</string>
+    <string name="key_7">7</string>
+    <string name="key_8">8</string>
+    <string name="key_9">9</string>
+    <string name="key_dot">.</string>
+    <string name="key_clear">C</string>
+    <string name="key_divide" translatable="false">÷</string>
+    <string name="key_multiply" translatable="false">×</string>
+    <string name="key_minus" translatable="false">−</string>
+    <string name="key_plus" translatable="false">+</string>
+    <string name="key_equals" translatable="false">=</string>
+
+    <!-- Content descriptions for accessibility (Slide 19, 31, 32) -->
+    <string name="cd_clear">Clear expression</string>
+    <string name="cd_delete">Delete last character</string>
+    <string name="cd_divide">Divide</string>
+    <string name="cd_multiply">Multiply</string>
+    <string name="cd_minus">Minus</string>
+    <string name="cd_plus">Plus</string>
+    <string name="cd_equals">Equals</string>
+    <string name="cd_dot">Decimal point</string>
+    <string name="cd_number">Number %1$s</string>
+
+    <!-- Hints & Messages -->
+    <string name="expression_hint">0</string>
+    <string name="error_divide_by_zero">Cannot divide by zero</string>
+    <string name="error_invalid_expression">Invalid expression</string>
+
+    <!-- Menus (Slide 19, 38) -->
+    <string name="menu_history">History</string>
+    <string name="menu_clear_history">Clear History</string>
+    <string name="history_title">Calculation History</string>
+    <string name="history_empty">No history available</string>
+</resources>

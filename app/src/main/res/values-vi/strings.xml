@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Máy tính</string>
+
+    <!-- Content descriptions for accessibility (Slide 19) -->
+    <string name="cd_clear">Xóa toàn bộ</string>
+    <string name="cd_delete">Xóa ký tự cuối</string>
+    <string name="cd_divide">Chia</string>
+    <string name="cd_multiply">Nhân</string>
+    <string name="cd_minus">Trừ</string>
+    <string name="cd_plus">Cộng</string>
+    <string name="cd_equals">Bằng</string>
+    <string name="cd_dot">Dấu phẩy thập phân</string>
+    <string name="cd_number">Số %1$s</string>
+
+    <!-- Hints & Messages -->
+    <string name="error_divide_by_zero">Không thể chia cho 0</string>
+    <string name="error_invalid_expression">Biểu thức không hợp lệ</string>
+
+    <!-- Menus (Slide 19, 38) -->
+    <string name="menu_history">Lịch sử</string>
+    <string name="menu_clear_history">Xóa lịch sử</string>
+    <string name="history_title">Lịch sử phép tính</string>
+    <string name="history_empty">Chưa có phép tính nào</string>
+</resources>
