@@ -1,0 +1,36 @@
+<resources>
+    <!-- Base Calculator button style (Slide 33) -->
+    <style name="Widget.Calculator.Button" parent="Widget.Material3.Button">
+        <item name="android:layout_margin">@dimen/calc_button_margin</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">@dimen/calc_button_text_size</item>
+    </style>
+
+    <!-- Function keys: Clear, Delete (Slide 33) -->
+    <style name="Widget.Calculator.Button.Function">
+        <item name="backgroundTint">?attr/colorSecondaryContainer</item>
+        <item name="android:textColor">?attr/colorOnSecondaryContainer</item>
+        <item name="iconTint">?attr/colorOnSecondaryContainer</item>
+    </style>
+
+    <!-- Operator keys: ÷, ×, −, + (Slide 33) -->
+    <style name="Widget.Calculator.Button.Operator">
+        <item name="backgroundTint">?attr/colorPrimaryContainer</item>
+        <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
+    </style>
+
+    <!-- Number keys: 0-9, . -->
+    <style name="Widget.Calculator.Button.Number">
+        <item name="backgroundTint">?attr/colorSurfaceContainerHigh</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <!-- Equals key: = -->
+    <style name="Widget.Calculator.Button.Equals">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Indigo Palette (Slide 20) -->
+    <color name="indigo_40">#3F51B5</color>
+    <color name="indigo_80">#B0BEC5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
