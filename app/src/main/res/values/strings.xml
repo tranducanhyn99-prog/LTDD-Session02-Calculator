@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="student_info" translatable="false">Trần Đức Anh - 24110155</string>
+    <string name="help_url" translatable="false">https://developer.android.com/guide/navigation</string>
 
     <!-- Key texts -->
     <string name="key_0">0</string>
@@ -21,7 +22,7 @@
     <string name="key_plus" translatable="false">+</string>
     <string name="key_equals" translatable="false">=</string>
 
-    <!-- Content descriptions for accessibility (Slide 19, 31, 32) -->
+    <!-- Content descriptions for accessibility -->
     <string name="cd_clear">Clear expression</string>
     <string name="cd_delete">Delete last character</string>
     <string name="cd_divide">Divide</string>
@@ -31,15 +32,37 @@
     <string name="cd_equals">Equals</string>
     <string name="cd_dot">Decimal point</string>
     <string name="cd_number">Number %1$s</string>
+    <string name="cd_share">Share calculation result</string>
+    <string name="cd_copy">Copy calculation result</string>
+    <string name="cd_export">Export history to text file</string>
 
     <!-- Hints & Messages -->
     <string name="expression_hint">0</string>
     <string name="error_divide_by_zero">Cannot divide by zero</string>
     <string name="error_invalid_expression">Invalid expression</string>
 
-    <!-- Menus (Slide 19, 38) -->
+    <!-- Menus & Navigation (Session 3) -->
+    <string name="menu_calculator">Calculator</string>
     <string name="menu_history">History</string>
     <string name="menu_clear_history">Clear History</string>
+    <string name="menu_about">About</string>
+    <string name="menu_help">Help</string>
+
+    <!-- History & Detail Screens (Session 3) -->
     <string name="history_title">Calculation History</string>
-    <string name="history_empty">No history available</string>
+    <string name="history_detail_title">Calculation Detail</string>
+    <string name="history_empty">No calculations yet</string>
+    <string name="history_cleared">History cleared</string>
+    <string name="undo">Undo</string>
+    <string name="share">Share</string>
+    <string name="copy">Copy</string>
+    <string name="copied">Copied to clipboard</string>
+    <string name="export">Export</string>
+    <string name="export_success">History exported successfully</string>
+    <string name="export_failed">Failed to export history</string>
+    <string name="use_in_calculator">Use in Calculator</string>
+    <string name="share_text">%1$s = %2$s</string>
+    <string name="no_browser">No browser app found to open Help page</string>
+    <string name="about_title">About Calculator</string>
+    <string name="about_text">Android Mobile Programming Course\nStudent: Trần Đức Anh (24110155)\nTotal calculations in history: %1$d</string>
 </resources>

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Máy tính</string>
 
-    <!-- Content descriptions for accessibility (Slide 19) -->
+    <!-- Content descriptions for accessibility -->
     <string name="cd_clear">Xóa toàn bộ</string>
     <string name="cd_delete">Xóa ký tự cuối</string>
     <string name="cd_divide">Chia</string>
@@ -11,14 +11,36 @@
     <string name="cd_equals">Bằng</string>
     <string name="cd_dot">Dấu phẩy thập phân</string>
     <string name="cd_number">Số %1$s</string>
+    <string name="cd_share">Chia sẻ kết quả phép tính</string>
+    <string name="cd_copy">Sao chép kết quả phép tính</string>
+    <string name="cd_export">Xuất lịch sử ra tập tin văn bản</string>
 
     <!-- Hints & Messages -->
     <string name="error_divide_by_zero">Không thể chia cho 0</string>
     <string name="error_invalid_expression">Biểu thức không hợp lệ</string>
 
-    <!-- Menus (Slide 19, 38) -->
+    <!-- Menus & Navigation (Session 3) -->
+    <string name="menu_calculator">Máy tính</string>
     <string name="menu_history">Lịch sử</string>
     <string name="menu_clear_history">Xóa lịch sử</string>
+    <string name="menu_about">Giới thiệu</string>
+    <string name="menu_help">Trợ giúp</string>
+
+    <!-- History & Detail Screens (Session 3) -->
     <string name="history_title">Lịch sử phép tính</string>
+    <string name="history_detail_title">Chi tiết phép tính</string>
     <string name="history_empty">Chưa có phép tính nào</string>
+    <string name="history_cleared">Đã xóa lịch sử</string>
+    <string name="undo">Hoàn tác</string>
+    <string name="share">Chia sẻ</string>
+    <string name="copy">Sao chép</string>
+    <string name="copied">Đã sao chép vào bộ nhớ tạm</string>
+    <string name="export">Xuất file</string>
+    <string name="export_success">Đã xuất lịch sử thành công</string>
+    <string name="export_failed">Không thể xuất lịch sử</string>
+    <string name="use_in_calculator">Dùng lại phép tính</string>
+    <string name="share_text">%1$s = %2$s</string>
+    <string name="no_browser">Không tìm thấy trình duyệt để mở trang trợ giúp</string>
+    <string name="about_title">Giới thiệu Máy tính</string>
+    <string name="about_text">Môn Lập trình Di động Android\nSinh viên: Trần Đức Anh (24110155)\nTổng số phép tính trong lịch sử: %1$d</string>
 </resources>
