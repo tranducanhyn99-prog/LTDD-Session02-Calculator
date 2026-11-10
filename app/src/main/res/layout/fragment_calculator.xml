@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/keypad_padding"
+    android:background="?android:attr/colorBackground">
+
+    <TextView
+        android:id="@+id/expressionText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/display_margin"
+        android:gravity="end|bottom"
+        android:hint="@string/expression_hint"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:textSize="@dimen/expression_text_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/resultText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="2 + 3 × 4" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/display_margin"
+        android:gravity="end"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="@dimen/result_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/displayGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/displayGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <!-- ================= ROW 1: C (weight 2), Delete (weight 1), Divide (weight 1) ================= -->
+    <Button
+        android:id="@+id/buttonClear"
+        style="@style/Widget.Calculator.Button.Function"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_clear"
+        android:contentDescription="@string/cd_clear"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toTopOf="@id/displayGuideline"
+        app:layout_constraintBottom_toTopOf="@id/button7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDelete" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDelete"
+        style="@style/Widget.Calculator.Button.Function"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/cd_delete"
+        app:icon="@drawable/ic_backspace"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toTopOf="@id/displayGuideline"
+        app:layout_constraintBottom_toTopOf="@id/button8"
+        app:layout_constraintStart_toEndOf="@id/buttonClear"
+        app:layout_constraintEnd_toStartOf="@id/buttonDivide" />
+
+    <Button
+        android:id="@+id/buttonDivide"
+        style="@style/Widget.Calculator.Button.Operator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_divide"
+        android:contentDescription="@string/cd_divide"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toTopOf="@id/displayGuideline"
+        app:layout_constraintBottom_toTopOf="@id/buttonMultiply"
+        app:layout_constraintStart_toEndOf="@id/buttonDelete"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ================= ROW 2: 7, 8, 9, Multiply ================= -->
+    <Button
+        android:id="@+id/button7"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_7"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear"
+        app:layout_constraintBottom_toTopOf="@id/button4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button8" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_8"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/buttonDelete"
+        app:layout_constraintBottom_toTopOf="@id/button5"
+        app:layout_constraintStart_toEndOf="@id/button7"
+        app:layout_constraintEnd_toStartOf="@id/button9" />
+
+    <Button
+        android:id="@+id/button9"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_9"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/buttonDelete"
+        app:layout_constraintBottom_toTopOf="@id/button6"
+        app:layout_constraintStart_toEndOf="@id/button8"
+        app:layout_constraintEnd_toStartOf="@id/buttonMultiply" />
+
+    <Button
+        android:id="@+id/buttonMultiply"
+        style="@style/Widget.Calculator.Button.Operator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_multiply"
+        android:contentDescription="@string/cd_multiply"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/buttonDivide"
+        app:layout_constraintBottom_toTopOf="@id/buttonMinus"
+        app:layout_constraintStart_toEndOf="@id/button9"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ================= ROW 3: 4, 5, 6, Minus ================= -->
+    <Button
+        android:id="@+id/button4"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_4"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/button7"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button5" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_5"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/button8"
+        app:layout_constraintBottom_toTopOf="@id/button2"
+        app:layout_constraintStart_toEndOf="@id/button4"
+        app:layout_constraintEnd_toStartOf="@id/button6" />
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_6"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/button9"
+        app:layout_constraintBottom_toTopOf="@id/button3"
+        app:layout_constraintStart_toEndOf="@id/button5"
+        app:layout_constraintEnd_toStartOf="@id/buttonMinus" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        style="@style/Widget.Calculator.Button.Operator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_minus"
+        android:contentDescription="@string/cd_minus"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/buttonMultiply"
+        app:layout_constraintBottom_toTopOf="@id/buttonPlus"
+        app:layout_constraintStart_toEndOf="@id/button6"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ================= ROW 4: 1, 2, 3, Plus ================= -->
+    <Button
+        android:id="@+id/button1"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_1"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintBottom_toTopOf="@id/button0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_2"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/button5"
+        app:layout_constraintBottom_toTopOf="@id/button0"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintEnd_toStartOf="@id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_3"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/button6"
+        app:layout_constraintBottom_toTopOf="@id/buttonDot"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintEnd_toStartOf="@id/buttonPlus" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        style="@style/Widget.Calculator.Button.Operator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_plus"
+        android:contentDescription="@string/cd_plus"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/buttonMinus"
+        app:layout_constraintBottom_toTopOf="@id/buttonEquals"
+        app:layout_constraintStart_toEndOf="@id/button3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ================= ROW 5: 0 (weight 2), Dot (weight 1), Equals (weight 1) ================= -->
+    <Button
+        android:id="@+id/button0"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_0"
+        android:contentDescription="@string/cd_number"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDot" />
+
+    <Button
+        android:id="@+id/buttonDot"
+        style="@style/Widget.Calculator.Button.Number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_dot"
+        android:contentDescription="@string/cd_dot"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button0"
+        app:layout_constraintEnd_toStartOf="@id/buttonEquals" />
+
+    <Button
+        android:id="@+id/buttonEquals"
+        style="@style/Widget.Calculator.Button.Equals"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/key_equals"
+        android:contentDescription="@string/cd_equals"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/buttonPlus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonDot"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
